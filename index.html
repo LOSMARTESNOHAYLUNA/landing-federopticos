@@ -16,56 +16,47 @@
       --gris-texto: #5A6B61;
       --negro: #1A2620;
       --blanco: #FFFFFF;
+      --rojo: #B03535;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Nunito', sans-serif; color: var(--negro); background: var(--blanco); overflow-x: hidden; }
 
-    /* IMAGE PLACEHOLDER STYLES */
-    .img-ph {
-      position: relative;
-      background: repeating-linear-gradient(45deg, #eef4f0, #eef4f0 12px, #e6efe9 12px, #e6efe9 24px);
-      border: 2px dashed var(--verde);
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--verde-oscuro);
-      overflow: hidden;
-    }
-    .img-ph .ph-icon { font-size: 38px; margin-bottom: 8px; }
-    .img-ph .ph-label { font-size: 12px; font-weight: 800; letter-spacing: .5px; padding: 0 16px; line-height: 1.4; }
-    .img-ph .ph-spec { font-size: 10px; font-weight: 700; opacity: .6; margin-top: 6px; }
-    /* Cuando subáis la imagen real: reemplazad el div .img-ph por <img src="..." class="real-img"> */
     .real-img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 16px; }
 
+    /* ICON SYSTEM */
+    .ico { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+    .ico svg { display: block; width: 100%; height: 100%; }
+
     /* TOP BAR */
-    .top-bar { background: var(--verde-oscuro); color: white; text-align: center; padding: 9px 20px; font-size: 13px; font-weight: 700; }
+    .top-bar { background: var(--verde-oscuro); color: white; text-align: center; padding: 9px 20px; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
     .top-bar a { color: #ADFFC3; text-decoration: none; }
+    .top-bar .ico { width: 16px; height: 16px; }
 
     /* NAV */
     nav { background: white; border-bottom: 2px solid var(--verde-suave); display: flex; align-items: center; justify-content: space-between; padding: 14px 40px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(45,179,74,0.08); }
     .logo-area { display: flex; align-items: center; gap: 12px; }
-    .logo-circle { width: 44px; height: 44px; background: var(--verde); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .logo-circle { width: 44px; height: 44px; background: var(--verde); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .logo-circle .ico { width: 24px; height: 24px; color: white; }
     .logo-text { font-size: 17px; font-weight: 900; color: var(--negro); line-height: 1.1; }
     .logo-text span { color: var(--verde); }
     .nav-phone { display: flex; align-items: center; gap: 24px; }
-    .nav-phone a { font-weight: 800; color: var(--verde-oscuro); text-decoration: none; font-size: 14px; }
+    .nav-phone a { font-weight: 800; color: var(--verde-oscuro); text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
+    .nav-phone a .ico { width: 17px; height: 17px; }
     .btn-nav { background: var(--verde); color: white; border: none; padding: 10px 22px; border-radius: 30px; font-weight: 800; font-size: 14px; cursor: pointer; transition: background 0.2s, transform 0.15s; font-family: 'Nunito', sans-serif; text-decoration: none; }
     .btn-nav:hover { background: var(--verde-oscuro); transform: translateY(-1px); }
 
     /* HERO */
     .hero { padding: 60px 40px 70px; display: grid; grid-template-columns: 1.05fr 440px; gap: 48px; align-items: center; max-width: 1240px; margin: 0 auto; }
-    .hero-badge { display: inline-block; background: var(--verde); color: white; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: var(--verde); color: white; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 18px; }
+    .hero-badge .ico { width: 14px; height: 14px; }
     .hero h1 { font-family: 'Merriweather', serif; font-size: 40px; font-weight: 700; color: var(--negro); line-height: 1.2; margin-bottom: 12px; }
     .hero h1 em { font-style: normal; color: var(--verde); text-decoration: underline; text-decoration-color: #C8EDCF; text-decoration-thickness: 3px; }
     .hero-subtitle { font-size: 17px; color: var(--gris-texto); margin-bottom: 24px; line-height: 1.6; font-weight: 600; }
     .hero-image-wrap { margin-bottom: 24px; }
     .hero-hero-img { width: 100%; height: 240px; }
     .hero-garantias { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .garantia-pill { display: flex; align-items: center; gap: 10px; background: var(--verde-claro); border: 1.5px solid var(--verde-suave); border-radius: 10px; padding: 10px 16px; font-size: 14px; font-weight: 700; color: var(--negro); }
-    .garantia-pill .ico { font-size: 18px; }
+    .garantia-pill { display: flex; align-items: center; gap: 12px; background: var(--verde-claro); border: 1.5px solid var(--verde-suave); border-radius: 10px; padding: 11px 16px; font-size: 14px; font-weight: 700; color: var(--negro); }
+    .garantia-pill .ico { width: 22px; height: 22px; color: var(--verde-oscuro); }
     .hero-price { display: flex; align-items: center; gap: 16px; }
     .price-tag { background: var(--negro); color: white; padding: 8px 20px; border-radius: 30px; font-size: 20px; font-weight: 900; }
     .price-tag span { color: var(--verde); }
@@ -73,8 +64,9 @@
 
     /* FORM CARD */
     .form-card { background: white; border-radius: 20px; box-shadow: 0 12px 48px rgba(0,0,0,0.13), 0 0 0 1px var(--verde-suave); padding: 32px 28px; }
-    .form-card h3 { font-size: 21px; font-weight: 900; color: var(--negro); margin-bottom: 6px; }
-    .form-card p { font-size: 13px; color: var(--gris-texto); margin-bottom: 20px; font-weight: 600; }
+    .form-card h3 { font-size: 21px; font-weight: 900; color: var(--negro); margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
+    .form-card h3 .ico { width: 22px; height: 22px; color: var(--verde); }
+    .form-card .form-intro { font-size: 13px; color: var(--gris-texto); margin-bottom: 20px; font-weight: 600; }
     .form-group { margin-bottom: 13px; }
     .form-group label { display: block; font-size: 12px; font-weight: 800; color: var(--negro); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
     .form-group input, .form-group select { width: 100%; border: 1.5px solid var(--gris-medio); border-radius: 10px; padding: 12px 14px; font-size: 14px; font-family: 'Nunito', sans-serif; color: var(--negro); background: var(--gris-claro); outline: none; transition: border-color 0.2s; }
@@ -85,8 +77,8 @@
     .form-check label a { color: var(--verde); }
     .btn-form { width: 100%; background: var(--verde); color: white; border: none; padding: 16px; border-radius: 12px; font-size: 16px; font-weight: 900; cursor: pointer; font-family: 'Nunito', sans-serif; transition: background 0.2s, transform 0.15s; }
     .btn-form:hover { background: var(--verde-oscuro); transform: translateY(-2px); }
-    .form-trust { text-align: center; font-size: 11px; color: var(--gris-texto); margin-top: 12px; font-weight: 600; }
-    .form-trust span { color: var(--verde); }
+    .form-trust { display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center; font-size: 11px; color: var(--gris-texto); margin-top: 12px; font-weight: 600; }
+    .form-trust .ico { width: 13px; height: 13px; color: var(--verde); }
 
     /* STATS */
     .stats-strip { background: var(--verde); color: white; display: grid; grid-template-columns: repeat(4, 1fr); }
@@ -98,7 +90,8 @@
     /* SECTIONS */
     .section { padding: 70px 40px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-tag { display: inline-block; background: var(--verde-claro); color: var(--verde-oscuro); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px; }
+    .section-tag { display: inline-flex; align-items: center; gap: 7px; background: var(--verde-claro); color: var(--verde-oscuro); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px; }
+    .section-tag .ico { width: 14px; height: 14px; }
     .section-title { font-family: 'Merriweather', serif; font-size: 32px; font-weight: 700; color: var(--negro); line-height: 1.3; margin-bottom: 12px; }
     .section-title em { font-style: normal; color: var(--verde); }
     .section-subtitle { font-size: 17px; color: var(--gris-texto); font-weight: 600; max-width: 600px; line-height: 1.6; margin-bottom: 40px; }
@@ -107,7 +100,7 @@
     /* QUIZ */
     .quiz-wrapper { background: var(--gris-claro); border-radius: 20px; overflow: hidden; border: 1px solid var(--gris-medio); }
     .quiz-header { background: var(--negro); color: white; padding: 22px 32px; display: flex; align-items: center; gap: 14px; }
-    .quiz-header .icon { font-size: 24px; }
+    .quiz-header .ico { width: 26px; height: 26px; color: var(--verde); }
     .quiz-header h3 { font-size: 18px; font-weight: 800; }
     .quiz-header p { font-size: 13px; opacity: 0.7; font-weight: 600; margin-top: 2px; }
     .quiz-body { padding: 32px; }
@@ -117,13 +110,16 @@
     .q-number { font-size: 11px; font-weight: 800; color: var(--verde); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
     .q-text { font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: var(--negro); margin-bottom: 24px; line-height: 1.4; }
     .quiz-options { display: flex; flex-direction: column; gap: 12px; }
-    .q-option { background: white; border: 2px solid var(--gris-medio); border-radius: 12px; padding: 16px 20px; cursor: pointer; font-size: 15px; font-weight: 700; color: var(--negro); display: flex; align-items: center; gap: 12px; transition: all 0.2s; text-align: left; font-family: 'Nunito', sans-serif; }
+    .q-option { background: white; border: 2px solid var(--gris-medio); border-radius: 12px; padding: 16px 20px; cursor: pointer; font-size: 15px; font-weight: 700; color: var(--negro); display: flex; align-items: center; gap: 14px; transition: all 0.2s; text-align: left; font-family: 'Nunito', sans-serif; }
     .q-option:hover { border-color: var(--verde); background: var(--verde-claro); transform: translateX(4px); }
-    .q-option .opt-icon { width: 36px; height: 36px; background: var(--verde-claro); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .q-option .opt-icon { width: 38px; height: 38px; background: var(--verde-claro); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+    .q-option .opt-icon .ico { width: 20px; height: 20px; color: var(--verde-oscuro); }
     .q-option:hover .opt-icon { background: var(--verde); }
+    .q-option:hover .opt-icon .ico { color: white; }
     .quiz-result { display: none; text-align: center; padding: 20px 0; }
     .quiz-result.active { display: block; animation: fadeIn 0.4s ease; }
-    .result-icon { font-size: 52px; margin-bottom: 16px; }
+    .result-icon { width: 64px; height: 64px; margin: 0 auto 16px; background: var(--verde-claro); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .result-icon .ico { width: 32px; height: 32px; color: var(--verde-oscuro); }
     .result-title { font-family: 'Merriweather', serif; font-size: 26px; font-weight: 700; color: var(--negro); margin-bottom: 12px; }
     .result-text { font-size: 16px; color: var(--gris-texto); font-weight: 600; max-width: 480px; margin: 0 auto 28px; line-height: 1.6; }
     .btn-result { display: inline-block; background: var(--verde); color: white; padding: 16px 36px; border-radius: 12px; font-weight: 900; font-size: 16px; cursor: pointer; border: none; font-family: 'Nunito', sans-serif; transition: background 0.2s, transform 0.15s; text-decoration: none; }
@@ -136,28 +132,31 @@
     /* OBJECIONES */
     .objections-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
     .objection-card { background: white; border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; border: 1px solid var(--gris-medio); }
-    .objection-myth { display: flex; align-items: flex-start; gap: 10px; }
-    .myth-icon { font-size: 18px; background: #FFF3F3; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .myth-text { font-size: 14px; font-weight: 700; color: #B03535; font-style: italic; }
+    .objection-myth { display: flex; align-items: center; gap: 12px; }
+    .myth-icon { background: #FFF3F3; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .myth-icon .ico { width: 18px; height: 18px; color: var(--rojo); }
+    .myth-text { font-size: 14px; font-weight: 700; color: var(--rojo); font-style: italic; }
     .objection-divider { width: 100%; height: 1px; background: var(--gris-medio); }
-    .objection-truth { display: flex; align-items: flex-start; gap: 10px; }
-    .truth-icon { font-size: 18px; background: var(--verde-claro); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .truth-text { font-size: 14px; font-weight: 700; color: var(--negro); }
+    .objection-truth { display: flex; align-items: flex-start; gap: 12px; }
+    .truth-icon { background: var(--verde-claro); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .truth-icon .ico { width: 18px; height: 18px; color: var(--verde-oscuro); }
+    .truth-text { font-size: 14px; font-weight: 700; color: var(--negro); padding-top: 8px; }
 
     /* PRODUCTO */
     .product-section { padding: 70px 40px; background: white; }
     .product-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .product-img { width: 100%; height: 420px; }
-    .product-name-tag { display: inline-block; background: var(--negro); color: white; font-size: 13px; font-weight: 800; padding: 6px 16px; border-radius: 20px; margin-bottom: 16px; }
+    .product-img { width: 100%; height: 420px; background: var(--gris-claro); }
+    .product-name-tag { display: inline-flex; align-items: center; gap: 7px; background: var(--negro); color: white; font-size: 13px; font-weight: 800; padding: 7px 16px; border-radius: 20px; margin-bottom: 16px; }
+    .product-name-tag .ico { width: 15px; height: 15px; color: var(--verde); }
     .features-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
     .features-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; font-weight: 600; color: var(--negro); }
-    .feat-check { width: 22px; height: 22px; background: var(--verde); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white; flex-shrink: 0; margin-top: 2px; }
+    .feat-check { width: 22px; height: 22px; background: var(--verde); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .feat-check .ico { width: 12px; height: 12px; color: white; }
 
-    /* LIFESTYLE BANNER */
+    /* LIFESTYLE */
     .lifestyle { padding: 0; }
     .lifestyle-grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 380px; }
     .lifestyle-img { width: 100%; height: 100%; min-height: 380px; border-radius: 0; }
-    .lifestyle-img.img-ph { border-radius: 0; }
     .lifestyle-text { background: var(--negro); color: white; padding: 56px 48px; display: flex; flex-direction: column; justify-content: center; }
     .lifestyle-text .section-tag { background: rgba(45,179,74,0.2); color: var(--verde); }
     .lifestyle-text h2 { font-family: 'Merriweather', serif; font-size: 30px; font-weight: 700; line-height: 1.3; margin-bottom: 16px; }
@@ -173,7 +172,8 @@
     .garantias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
     .garantia-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px 24px; transition: background 0.2s; }
     .garantia-card:hover { background: rgba(45,179,74,0.12); border-color: var(--verde); }
-    .garantia-card .g-icon { font-size: 32px; margin-bottom: 14px; }
+    .garantia-card .g-icon { width: 44px; height: 44px; background: rgba(45,179,74,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .garantia-card .g-icon .ico { width: 24px; height: 24px; color: var(--verde); }
     .garantia-card h4 { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
     .garantia-card p { font-size: 13px; opacity: 0.75; font-weight: 600; line-height: 1.6; }
 
@@ -184,7 +184,8 @@
     .steps-grid::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 2px; background: var(--verde-suave); z-index: 0; }
     .step-card { background: white; border-radius: 16px; padding: 22px 16px; text-align: center; position: relative; z-index: 1; border: 1.5px solid var(--gris-medio); }
     .step-num { width: 36px; height: 36px; background: var(--verde); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 16px; margin: 0 auto 12px; }
-    .step-icon { font-size: 22px; margin-bottom: 10px; }
+    .step-icon { width: 40px; height: 40px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; }
+    .step-icon .ico { width: 26px; height: 26px; color: var(--verde-oscuro); }
     .step-title { font-size: 13px; font-weight: 800; color: var(--negro); margin-bottom: 6px; }
     .step-desc { font-size: 11px; color: var(--gris-texto); font-weight: 600; line-height: 1.5; }
 
@@ -193,12 +194,11 @@
     .testimonials-inner { max-width: 1100px; margin: 0 auto; }
     .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
     .test-card { background: var(--gris-claro); border-radius: 16px; padding: 28px 24px; border: 1px solid var(--gris-medio); }
+    .test-stars { display: flex; gap: 2px; margin-bottom: 12px; }
+    .test-stars .ico { width: 16px; height: 16px; color: #F5A623; }
     .test-text { font-size: 14px; font-weight: 600; color: var(--negro); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
-    .test-stars { font-size: 13px; color: #F5A623; margin-bottom: 12px; }
     .test-author { display: flex; align-items: center; gap: 10px; }
     .test-avatar { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
-    .test-avatar.img-ph { border-radius: 50%; }
-    .test-avatar .ph-icon { font-size: 18px; margin: 0; }
     .test-name { font-size: 13px; font-weight: 800; color: var(--negro); }
     .test-age { font-size: 11px; color: var(--gris-texto); font-weight: 600; }
 
@@ -209,8 +209,9 @@
     .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
     .btn-cta-primary { background: white; color: var(--verde-oscuro); padding: 16px 36px; border-radius: 12px; font-weight: 900; font-size: 16px; cursor: pointer; border: none; font-family: 'Nunito', sans-serif; transition: transform 0.15s, box-shadow 0.15s; text-decoration: none; display: inline-block; }
     .btn-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-    .btn-cta-secondary { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.6); padding: 16px 36px; border-radius: 12px; font-weight: 800; font-size: 16px; cursor: pointer; font-family: 'Nunito', sans-serif; transition: background 0.2s; text-decoration: none; display: inline-block; }
+    .btn-cta-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; border: 2px solid rgba(255,255,255,0.6); padding: 16px 36px; border-radius: 12px; font-weight: 800; font-size: 16px; cursor: pointer; font-family: 'Nunito', sans-serif; transition: background 0.2s; text-decoration: none; }
     .btn-cta-secondary:hover { background: rgba(255,255,255,0.1); }
+    .btn-cta-secondary .ico { width: 18px; height: 18px; }
     .cta-contact { margin-top: 30px; font-size: 14px; opacity: 0.8; font-weight: 700; }
     .cta-contact a { color: white; }
 
@@ -218,8 +219,8 @@
     .faq-section { padding: 70px 40px; background: var(--gris-claro); }
     .faq-inner { max-width: 760px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--gris-medio); }
-    .faq-q { width: 100%; background: none; border: none; padding: 20px 0; text-align: left; font-size: 16px; font-weight: 800; color: var(--negro); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Nunito', sans-serif; }
-    .faq-q .arrow { color: var(--verde); font-size: 20px; transition: transform 0.3s; }
+    .faq-q { width: 100%; background: none; border: none; padding: 20px 0; text-align: left; font-size: 16px; font-weight: 800; color: var(--negro); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Nunito', sans-serif; }
+    .faq-q .arrow { color: var(--verde); font-size: 20px; transition: transform 0.3s; flex-shrink: 0; }
     .faq-q.open .arrow { transform: rotate(45deg); }
     .faq-a { max-height: 0; overflow: hidden; font-size: 14px; color: var(--gris-texto); font-weight: 600; line-height: 1.7; transition: max-height 0.35s ease, padding 0.3s; }
     .faq-a.open { max-height: 260px; padding-bottom: 18px; }
@@ -230,8 +231,9 @@
     .footer-brand .logo-text { color: white; }
     .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 12px; line-height: 1.6; font-weight: 600; }
     .footer-col h5 { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--verde); margin-bottom: 14px; }
-    .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.65); text-decoration: none; font-weight: 600; margin-bottom: 8px; transition: color 0.2s; }
+    .footer-col a { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.65); text-decoration: none; font-weight: 600; margin-bottom: 8px; transition: color 0.2s; }
     .footer-col a:hover { color: var(--verde); }
+    .footer-col a .ico { width: 15px; height: 15px; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 600; }
 
     @media (max-width: 900px) {
@@ -255,32 +257,153 @@
 </head>
 <body>
 
-<!-- ════════════════════════════════════════════════
-     GUÍA DE IMÁGENES (eliminar este bloque al publicar)
-     Cada recuadro punteado verde es un hueco de imagen.
-     Para insertar la foto real, sustituye el <div class="img-ph ...">…</div>
-     por:  <img src="URL_O_RUTA" alt="texto" class="real-img" />
-     Imágenes recomendadas:
-       • Producto Phonak Audéo Sphere Infinio (foto oficial del fabricante,
-         disponible para centros autorizados).
-       • Personas reales usando el audífono / en consulta (fotos propias del
-         centro o banco de imágenes con licencia comercial).
-     ════════════════════════════════════════════════ -->
+<!-- ════════ DEFINICIÓN DE ICONOS SVG (sprite) ════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- ear / audición -->
+    <symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 2.5-1.5 3.5-2.5 4.5s-1.5 2-1.5 3.5a3 3 0 0 1-6 0"/><path d="M9 8.5a3 3 0 0 1 6 0c0 1.5-1 2-1 3"/>
+    </symbol>
+    <!-- shield -->
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </symbol>
+    <!-- lock -->
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+    </symbol>
+    <!-- wrench / ajustes -->
+    <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.1-2.1 2.6-2.6z"/>
+    </symbol>
+    <!-- check -->
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 6 9 17l-5-5"/>
+    </symbol>
+    <!-- x -->
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 6 6 18M6 6l12 12"/>
+    </symbol>
+    <!-- phone -->
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>
+    </symbol>
+    <!-- whatsapp -->
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.6 6.6 0 0 1-1.9-1.2 7.3 7.3 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c.6.3 1.1.4 1.5.5a3.5 3.5 0 0 0 1.6.1c.5-.1 1.4-.6 1.6-1.1s.2-1 .1-1.1-.2-.2-.4-.3z"/>
+    </symbol>
+    <!-- spark / IA -->
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/>
+    </symbol>
+    <!-- target -->
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>
+    </symbol>
+    <!-- brain / mente -->
+    <symbol id="i-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9.5 3a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0-1.5 4.5 2.5 2.5 0 0 0 0 4.5A2.5 2.5 0 0 0 7 19a2.5 2.5 0 0 0 5 0V4a1 1 0 0 0-2.5-1z"/><path d="M14.5 3a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1 1.5 4.5 2.5 2.5 0 0 1 0 4.5A2.5 2.5 0 0 1 17 19a2.5 2.5 0 0 1-5 0"/>
+    </symbol>
+    <!-- bluetooth -->
+    <symbol id="i-bluetooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m7 7 10 10-5 5V2l5 5L7 17"/>
+    </symbol>
+    <!-- battery -->
+    <symbol id="i-battery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 11v2"/><path d="M6 11v2M9.5 11v2"/>
+    </symbol>
+    <!-- phone-app -->
+    <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>
+    </symbol>
+    <!-- sliders / ajustable -->
+    <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/>
+    </symbol>
+    <!-- handshake -->
+    <symbol id="i-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6a2 2 0 0 0 0-2.8l-3-3a1 1 0 0 0-1.4 0L11 11"/><path d="m21 3-6 6M3 9l4-4 4 4-3 3a2 2 0 0 1-3 0L3 10a1 1 0 0 1 0-1z"/>
+    </symbol>
+    <!-- card -->
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
+    </symbol>
+    <!-- doc -->
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/>
+    </symbol>
+    <!-- calendar -->
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+    </symbol>
+    <!-- stethoscope -->
+    <symbol id="i-stetho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 3v6a5 5 0 0 0 10 0V3"/><path d="M4 3H2M14 3h2M9 19a4 4 0 0 0 8 0v-2"/><circle cx="19" cy="14" r="2"/>
+    </symbol>
+    <!-- gear -->
+    <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 0 1-4 0v-.1A1.6 1.6 0 0 0 7 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0-1.1-2.7H1a2 2 0 0 1 0-4h.1A1.6 1.6 0 0 0 2.6 7a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 7 2.6 1.6 1.6 0 0 0 8 1.1V1a2 2 0 0 1 4 0v.1A1.6 1.6 0 0 0 14.6 2.6a1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V7a1.6 1.6 0 0 0 1.5 1H23a2 2 0 0 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/>
+    </symbol>
+    <!-- trophy -->
+    <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9a6 6 0 0 0 12 0V3H6zM6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 21h6M12 15v6"/>
+    </symbol>
+    <!-- chat -->
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </symbol>
+    <!-- heart -->
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 14c1.5-1.5 3-3.3 3-5.5A4.5 4.5 0 0 0 12 5 4.5 4.5 0 0 0 2 8.5c0 2.2 1.5 4 3 5.5l7 7z"/>
+    </symbol>
+    <!-- star (filled) -->
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/>
+    </symbol>
+    <!-- frown / smile / meh -->
+    <symbol id="i-frown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><path d="M9 9h.01M15 9h.01"/>
+    </symbol>
+    <symbol id="i-meh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><path d="M8 15h8"/><path d="M9 9h.01M15 9h.01"/>
+    </symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>
+    </symbol>
+    <!-- tv -->
+    <symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="7" width="20" height="13" rx="2"/><path d="m17 2-5 5-5-5"/>
+    </symbol>
+    <!-- volume -->
+    <symbol id="i-volume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/>
+    </symbol>
+    <!-- users / familiar -->
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>
+    </symbol>
+    <!-- pin / globe -->
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/>
+    </symbol>
+  </defs>
+</svg>
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  🎧 Audífonos Phonak Audéo Sphere™ Infinio en alquiler &nbsp;|&nbsp; 2 primeros meses gratis · valorado en <strong>400 €</strong> &nbsp;|&nbsp; <a href="tel:+34969233243">Llámanos: 96 923 32 43</a>
+  <span class="ico"><svg><use href="#i-ear"/></svg></span>
+  Audífonos Phonak Audéo Sphere™ Infinio en alquiler &nbsp;|&nbsp; 2 primeros meses gratis · valorado en <strong>400 €</strong> &nbsp;|&nbsp; <a href="tel:+34969233243">Llámanos: 96 923 32 43</a>
 </div>
 
 <!-- NAV -->
 <nav>
   <div class="logo-area">
-    <div class="logo-circle">👁️</div>
+    <div class="logo-circle"><span class="ico"><svg><use href="#i-ear"/></svg></span></div>
     <div class="logo-text">Federópticos <span>Yolanda</span></div>
   </div>
   <div class="nav-phone">
-    <a href="tel:+34969233243">📞 96 923 32 43</a>
-    <a href="https://wa.me/34604463001">📲 WhatsApp</a>
+    <a href="tel:+34969233243"><span class="ico"><svg><use href="#i-phone"/></svg></span> 96 923 32 43</a>
+    <a href="https://wa.me/34604463001"><span class="ico"><svg><use href="#i-whatsapp"/></svg></span> WhatsApp</a>
     <a href="#form-cita" class="btn-nav">Reservar cita gratis</a>
   </div>
 </nav>
@@ -289,7 +412,7 @@
 <section style="background: linear-gradient(135deg, #EDFAF1 0%, #D8F5E1 100%);">
   <div class="hero">
     <div class="hero-left">
-      <span class="hero-badge">✨ Experiencia Auditiva Pro</span>
+      <span class="hero-badge"><span class="ico"><svg><use href="#i-spark"/></svg></span> Experiencia Auditiva Pro</span>
       <h1>Oír con claridad,<br/>sin pagar miles de<br/>euros de <em>golpe</em></h1>
       <p class="hero-subtitle">Accede al audífono premium <strong>Phonak Audéo Sphere™ Infinio</strong> con inteligencia artificial, en modalidad de alquiler. Tecnología de vanguardia, acompañamiento experto y garantía real.</p>
 
@@ -298,9 +421,9 @@
       </div>
 
       <div class="hero-garantias">
-        <div class="garantia-pill"><span class="ico">🛡️</span> Hasta 3 años de garantía <strong>gratuita</strong></div>
-        <div class="garantia-pill"><span class="ico">🔒</span> Ampliación a 5 años con <strong>cobertura de robo y pérdida</strong></div>
-        <div class="garantia-pill"><span class="ico">🔧</span> Ajustes y revisiones <strong>ilimitados incluidos</strong></div>
+        <div class="garantia-pill"><span class="ico"><svg><use href="#i-shield"/></svg></span> Hasta 3 años de garantía <strong>gratuita</strong></div>
+        <div class="garantia-pill"><span class="ico"><svg><use href="#i-lock"/></svg></span> Ampliación a 5 años con <strong>cobertura de robo y pérdida</strong></div>
+        <div class="garantia-pill"><span class="ico"><svg><use href="#i-wrench"/></svg></span> Ajustes y revisiones <strong>ilimitados incluidos</strong></div>
       </div>
       <div class="hero-price">
         <span class="price-tag">Desde <span>100€</span>/mes</span>
@@ -309,8 +432,8 @@
     </div>
 
     <div class="form-card" id="form-cita">
-      <h3>🎯 Reserva tu cita gratis</h3>
-      <p>Explora la Experiencia Auditiva Pro sin compromiso</p>
+      <h3><span class="ico"><svg><use href="#i-target"/></svg></span> Reserva tu cita gratis</h3>
+      <p class="form-intro">Explora la Experiencia Auditiva Pro sin compromiso</p>
       <div class="form-group">
         <label>Tu nombre</label>
         <input type="text" placeholder="María García" />
@@ -336,7 +459,7 @@
         <label for="rgpd">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos para que me contacten.</label>
       </div>
       <button class="btn-form">Quiero mi cita gratuita →</button>
-      <p class="form-trust">🔒 Sin compromiso · <span>Sin coste</span> · Respuesta en menos de 24h</p>
+      <p class="form-trust"><span class="ico"><svg><use href="#i-lock"/></svg></span> Sin compromiso · Sin coste · Respuesta en menos de 24h</p>
     </div>
   </div>
 </section>
@@ -352,12 +475,12 @@
 <!-- QUIZ -->
 <section class="section">
   <div class="section-inner">
-    <span class="section-tag">🎯 Descubre si te conviene</span>
+    <span class="section-tag"><span class="ico"><svg><use href="#i-target"/></svg></span> Descubre si te conviene</span>
     <h2 class="section-title">¿Necesitas mejorar<br/>tu <em>audición</em>?</h2>
     <p class="section-subtitle">Responde estas 3 preguntas y descubre si la Experiencia Auditiva Pro es la opción adecuada para ti.</p>
     <div class="quiz-wrapper">
       <div class="quiz-header">
-        <div class="icon">🎧</div>
+        <span class="ico"><svg><use href="#i-ear"/></svg></span>
         <div>
           <h3>Test auditivo rápido</h3>
           <p>Solo 3 preguntas · Sin registro · Resultado inmediato</p>
@@ -370,9 +493,9 @@
           <p class="q-number">Pregunta 1 de 3</p>
           <p class="q-text">¿Con qué frecuencia pides que te repitan lo que te han dicho?</p>
           <div class="quiz-options">
-            <button class="q-option" onclick="nextQ(2)"><div class="opt-icon">😟</div><div>Muy a menudo, varias veces al día</div></button>
-            <button class="q-option" onclick="nextQ(2)"><div class="opt-icon">🤔</div><div>De vez en cuando, sobre todo en sitios ruidosos</div></button>
-            <button class="q-option" onclick="nextQ(2)"><div class="opt-icon">😊</div><div>Casi nunca, oigo con bastante claridad</div></button>
+            <button class="q-option" onclick="nextQ(2)"><span class="opt-icon"><span class="ico"><svg><use href="#i-frown"/></svg></span></span><span>Muy a menudo, varias veces al día</span></button>
+            <button class="q-option" onclick="nextQ(2)"><span class="opt-icon"><span class="ico"><svg><use href="#i-meh"/></svg></span></span><span>De vez en cuando, sobre todo en sitios ruidosos</span></button>
+            <button class="q-option" onclick="nextQ(2)"><span class="opt-icon"><span class="ico"><svg><use href="#i-smile"/></svg></span></span><span>Casi nunca, oigo con bastante claridad</span></button>
           </div>
         </div>
 
@@ -380,9 +503,9 @@
           <p class="q-number">Pregunta 2 de 3</p>
           <p class="q-text">¿Subes el volumen de la televisión más de lo habitual en tu entorno?</p>
           <div class="quiz-options">
-            <button class="q-option" onclick="nextQ(3)"><div class="opt-icon">📺</div><div>Sí, y me llaman la atención por ello</div></button>
-            <button class="q-option" onclick="nextQ(3)"><div class="opt-icon">🔊</div><div>A veces, depende del programa o la hora</div></button>
-            <button class="q-option" onclick="nextQ(3)"><div class="opt-icon">✅</div><div>No, el volumen estándar me resulta cómodo</div></button>
+            <button class="q-option" onclick="nextQ(3)"><span class="opt-icon"><span class="ico"><svg><use href="#i-tv"/></svg></span></span><span>Sí, y me llaman la atención por ello</span></button>
+            <button class="q-option" onclick="nextQ(3)"><span class="opt-icon"><span class="ico"><svg><use href="#i-volume"/></svg></span></span><span>A veces, depende del programa o la hora</span></button>
+            <button class="q-option" onclick="nextQ(3)"><span class="opt-icon"><span class="ico"><svg><use href="#i-check"/></svg></span></span><span>No, el volumen estándar me resulta cómodo</span></button>
           </div>
         </div>
 
@@ -390,14 +513,14 @@
           <p class="q-number">Pregunta 3 de 3</p>
           <p class="q-text">¿Has evitado alguna vez reuniones o situaciones sociales por miedo a no entender bien?</p>
           <div class="quiz-options">
-            <button class="q-option" onclick="showResult('alta')"><div class="opt-icon">😔</div><div>Sí, me resulta incómodo y prefiero evitarlas</div></button>
-            <button class="q-option" onclick="showResult('media')"><div class="opt-icon">😐</div><div>Alguna vez, aunque intento no limitarme</div></button>
-            <button class="q-option" onclick="showResult('baja')"><div class="opt-icon">😄</div><div>No, participo con normalidad en todo</div></button>
+            <button class="q-option" onclick="showResult('alta')"><span class="opt-icon"><span class="ico"><svg><use href="#i-frown"/></svg></span></span><span>Sí, me resulta incómodo y prefiero evitarlas</span></button>
+            <button class="q-option" onclick="showResult('media')"><span class="opt-icon"><span class="ico"><svg><use href="#i-meh"/></svg></span></span><span>Alguna vez, aunque intento no limitarme</span></button>
+            <button class="q-option" onclick="showResult('baja')"><span class="opt-icon"><span class="ico"><svg><use href="#i-smile"/></svg></span></span><span>No, participo con normalidad en todo</span></button>
           </div>
         </div>
 
         <div class="quiz-result" id="result-alta">
-          <div class="result-icon">🎧</div>
+          <div class="result-icon"><span class="ico"><svg><use href="#i-ear"/></svg></span></div>
           <p class="result-title">Tu audición necesita atención</p>
           <p class="result-text">Lo que describes es muy habitual y tiene solución. La <strong>Experiencia Auditiva Pro</strong> está diseñada exactamente para ti: tecnología premium, sin una inversión inicial elevada y con todo el acompañamiento.</p>
           <a href="#form-cita" class="btn-result">Reservar cita gratuita ahora →</a>
@@ -405,7 +528,7 @@
         </div>
 
         <div class="quiz-result" id="result-media">
-          <div class="result-icon">👂</div>
+          <div class="result-icon"><span class="ico"><svg><use href="#i-ear"/></svg></span></div>
           <p class="result-title">Vale la pena una revisión</p>
           <p class="result-text">Tus síntomas son los primeros indicios de una pérdida auditiva leve. Lo mejor es actuar pronto. Una cita informativa gratuita te sacará de dudas sin compromiso.</p>
           <a href="#form-cita" class="btn-result">Pedir cita informativa gratis →</a>
@@ -413,7 +536,7 @@
         </div>
 
         <div class="quiz-result" id="result-baja">
-          <div class="result-icon">✨</div>
+          <div class="result-icon"><span class="ico"><svg><use href="#i-smile"/></svg></span></div>
           <p class="result-title">Tu audición parece estar bien</p>
           <p class="result-text">¡Estupendo! Pero los problemas auditivos se instalan de forma gradual. Una revisión preventiva gratuita siempre es buena idea. También podemos ayudar a alguien de tu entorno.</p>
           <a href="#form-cita" class="btn-result">Consultar por un familiar →</a>
@@ -427,29 +550,29 @@
 <!-- OBJECIONES -->
 <section class="section bg-light">
   <div class="section-inner">
-    <span class="section-tag">🧠 Mitos frecuentes</span>
+    <span class="section-tag"><span class="ico"><svg><use href="#i-brain"/></svg></span> Mitos frecuentes</span>
     <h2 class="section-title">El mayor freno no son los audífonos.<br/><em>Son las falsas creencias.</em></h2>
     <p class="section-subtitle">Conocemos los miedos que frenan la decisión. Aquí están los hechos.</p>
     <div class="objections-grid">
       <div class="objection-card">
-        <div class="objection-myth"><div class="myth-icon">💬</div><div class="myth-text">"Son para gente muy mayor"</div></div>
+        <div class="objection-myth"><div class="myth-icon"><span class="ico"><svg><use href="#i-x"/></svg></span></div><div class="myth-text">"Son para gente muy mayor"</div></div>
         <div class="objection-divider"></div>
-        <div class="objection-truth"><div class="truth-icon">✅</div><div class="truth-text">El Phonak Audéo Sphere Infinio es compacto, discreto y lo usan personas activas desde los 40 años.</div></div>
+        <div class="objection-truth"><div class="truth-icon"><span class="ico"><svg><use href="#i-check"/></svg></span></div><div class="truth-text">El Phonak Audéo Sphere Infinio es compacto, discreto y lo usan personas activas desde los 40 años.</div></div>
       </div>
       <div class="objection-card">
-        <div class="objection-myth"><div class="myth-icon">💬</div><div class="myth-text">"Seguro que son grandes y molestos"</div></div>
+        <div class="objection-myth"><div class="myth-icon"><span class="ico"><svg><use href="#i-x"/></svg></span></div><div class="myth-text">"Seguro que son grandes y molestos"</div></div>
         <div class="objection-divider"></div>
-        <div class="objection-truth"><div class="truth-icon">✅</div><div class="truth-text">Los audífonos actuales son discretos y cómodos. Te olvidas de que los llevas. La tecnología ha cambiado radicalmente.</div></div>
+        <div class="objection-truth"><div class="truth-icon"><span class="ico"><svg><use href="#i-check"/></svg></span></div><div class="truth-text">Los audífonos actuales son discretos y cómodos. Te olvidas de que los llevas. La tecnología ha cambiado radicalmente.</div></div>
       </div>
       <div class="objection-card">
-        <div class="objection-myth"><div class="myth-icon">💬</div><div class="myth-text">"La gente no se adapta"</div></div>
+        <div class="objection-myth"><div class="myth-icon"><span class="ico"><svg><use href="#i-x"/></svg></span></div><div class="myth-text">"La gente no se adapta"</div></div>
         <div class="objection-divider"></div>
-        <div class="objection-truth"><div class="truth-icon">✅</div><div class="truth-text">Con el alquiler vives la experiencia real antes de decidir. Nuestro equipo te acompaña en cada ajuste hasta que te sientas perfecto.</div></div>
+        <div class="objection-truth"><div class="truth-icon"><span class="ico"><svg><use href="#i-check"/></svg></span></div><div class="truth-text">Con el alquiler vives la experiencia real antes de decidir. Nuestro equipo te acompaña en cada ajuste hasta que te sientas perfecto.</div></div>
       </div>
       <div class="objection-card">
-        <div class="objection-myth"><div class="myth-icon">💬</div><div class="myth-text">"Son carísimos, no me lo puedo permitir"</div></div>
+        <div class="objection-myth"><div class="myth-icon"><span class="ico"><svg><use href="#i-x"/></svg></span></div><div class="myth-text">"Son carísimos, no me lo puedo permitir"</div></div>
         <div class="objection-divider"></div>
-        <div class="objection-truth"><div class="truth-icon">✅</div><div class="truth-text">Por eso existe el alquiler: tecnología premium desde 100€/mes, con los 2 primeros meses gratis. Sin grandes desembolsos.</div></div>
+        <div class="objection-truth"><div class="truth-icon"><span class="ico"><svg><use href="#i-check"/></svg></span></div><div class="truth-text">Por eso existe el alquiler: tecnología premium desde 100€/mes, con los 2 primeros meses gratis. Sin grandes desembolsos.</div></div>
       </div>
     </div>
   </div>
@@ -458,31 +581,29 @@
 <!-- PRODUCTO -->
 <section class="product-section">
   <div class="product-inner">
-    <!-- FOTO PRODUCTO Phonak Audéo Sphere Infinio -->
     <img src="img/ph-packshot-audeo-i-r-p6-pair-with-easy-guard-infinio-ultra-square.webp" alt="Audífono Phonak Audéo Sphere Infinio Ultra" class="real-img product-img" />
     <div>
-      <span class="product-name-tag">🏆 Audífono Premium con IA</span>
+      <span class="product-name-tag"><span class="ico"><svg><use href="#i-trophy"/></svg></span> Audífono Premium con IA</span>
       <h2 class="section-title">El <em>Phonak Audéo<br/>Sphere™ Infinio</em><br/>en alquiler mensual</h2>
       <p style="font-size:15px;color:var(--gris-texto);font-weight:600;line-height:1.7;">Un audífono de última generación con el primer chip de IA dedicado del mundo para separar el habla del ruido. Diseñado para tu día a día, en cualquier entorno.</p>
       <ul class="features-list">
-        <li><div class="feat-check">✓</div><span><strong>Claridad del habla con IA</strong> — entiende conversaciones sin esfuerzo, incluso con mucho ruido alrededor</span></li>
-        <li><div class="feat-check">✓</div><span><strong>Conectividad Bluetooth universal</strong> — enlaza con tu móvil, televisión y otros dispositivos</span></li>
-        <li><div class="feat-check">✓</div><span><strong>Diseño discreto y cómodo</strong> — pequeño, ligero y prácticamente imperceptible</span></li>
-        <li><div class="feat-check">✓</div><span><strong>Recargable de larga duración</strong> — batería para todo el día con una sola carga</span></li>
-        <li><div class="feat-check">✓</div><span><strong>Ajuste personalizado</strong> — programado según tu pérdida auditiva concreta</span></li>
-        <li><div class="feat-check">✓</div><span><strong>App de control</strong> — ajusta volumen y programas desde tu smartphone</span></li>
+        <li><span class="feat-check"><span class="ico"><svg><use href="#i-check"/></svg></span></span><span><strong>Claridad del habla con IA</strong> — entiende conversaciones sin esfuerzo, incluso con mucho ruido alrededor</span></li>
+        <li><span class="feat-check"><span class="ico"><svg><use href="#i-check"/></svg></span></span><span><strong>Conectividad Bluetooth universal</strong> — enlaza con tu móvil, televisión y otros dispositivos</span></li>
+        <li><span class="feat-check"><span class="ico"><svg><use href="#i-check"/></svg></span></span><span><strong>Diseño discreto y cómodo</strong> — pequeño, ligero y prácticamente imperceptible</span></li>
+        <li><span class="feat-check"><span class="ico"><svg><use href="#i-check"/></svg></span></span><span><strong>Recargable de larga duración</strong> — batería para todo el día con una sola carga</span></li>
+        <li><span class="feat-check"><span class="ico"><svg><use href="#i-check"/></svg></span></span><span><strong>Ajuste personalizado</strong> — programado según tu pérdida auditiva concreta</span></li>
+        <li><span class="feat-check"><span class="ico"><svg><use href="#i-check"/></svg></span></span><span><strong>App de control</strong> — ajusta volumen y programas desde tu smartphone</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- LIFESTYLE BANNER -->
+<!-- LIFESTYLE -->
 <section class="lifestyle">
   <div class="lifestyle-grid">
-    <!-- FOTO LIFESTYLE -->
     <img src="img/ph-pickeyvisual-audeoir-speechinnoise-6000x4000.webp" alt="Persona usando su audífono en su día a día" class="real-img lifestyle-img" />
     <div class="lifestyle-text">
-      <span class="section-tag">💚 La vida que recuperas</span>
+      <span class="section-tag"><span class="ico"><svg><use href="#i-heart"/></svg></span> La vida que recuperas</span>
       <h2>No es solo oír.<br/>Es <em>volver a estar</em><br/>en cada conversación.</h2>
       <p>Seguir una película sin subir el volumen al máximo. Escuchar a tus nietos sin pedirles que repitan. Participar en la sobremesa sin esfuerzo. Eso es lo que de verdad está en juego.</p>
     </div>
@@ -492,16 +613,16 @@
 <!-- GARANTÍAS -->
 <section class="garantias-section">
   <div class="garantias-inner">
-    <span class="section-tag">🛡️ Tranquilidad total</span>
+    <span class="section-tag"><span class="ico"><svg><use href="#i-shield"/></svg></span> Tranquilidad total</span>
     <h2 class="section-title">Respaldo real,<br/>sin letra pequeña.</h2>
     <p style="font-size:17px;opacity:0.75;font-weight:600;max-width:560px;line-height:1.6;">Porque esto no es solo un audífono: va contigo cada día. Lo importante es que lo hagas con <em style="font-style:normal;color:var(--verde);">confianza</em>.</p>
     <div class="garantias-grid">
-      <div class="garantia-card"><div class="g-icon">🛡️</div><h4>3 años de garantía gratuita</h4><p>Incluida desde el primer día. Si hay cualquier avería o rotura, está cubierta sin coste adicional.</p></div>
-      <div class="garantia-card"><div class="g-icon">🔒</div><h4>Ampliación hasta 5 años</h4><p>Cobertura extendida que incluye también situaciones de robo o pérdida, con reposición a coste parcial.</p></div>
-      <div class="garantia-card"><div class="g-icon">🔧</div><h4>Ajustes ilimitados</h4><p>Reprogramaciones, ajustes finos y visitas de seguimiento incluidas durante todo el alquiler.</p></div>
-      <div class="garantia-card"><div class="g-icon">🤝</div><h4>Acompañamiento experto</h4><p>Un equipo profesional te guía desde la primera cita hasta que el audífono forme parte natural de tu vida.</p></div>
-      <div class="garantia-card"><div class="g-icon">💳</div><h4>Sin permanencia inicial</h4><p>Modalidad de alquiler sin ataduras: primero vives la experiencia, luego decides con calma.</p></div>
-      <div class="garantia-card"><div class="g-icon">📋</div><h4>Transparencia total</h4><p>Te explicamos siempre todas las condiciones con total claridad. Sin sorpresas.</p></div>
+      <div class="garantia-card"><div class="g-icon"><span class="ico"><svg><use href="#i-shield"/></svg></span></div><h4>3 años de garantía gratuita</h4><p>Incluida desde el primer día. Si hay cualquier avería o rotura, está cubierta sin coste adicional.</p></div>
+      <div class="garantia-card"><div class="g-icon"><span class="ico"><svg><use href="#i-lock"/></svg></span></div><h4>Ampliación hasta 5 años</h4><p>Cobertura extendida que incluye también situaciones de robo o pérdida, con reposición a coste parcial.</p></div>
+      <div class="garantia-card"><div class="g-icon"><span class="ico"><svg><use href="#i-wrench"/></svg></span></div><h4>Ajustes ilimitados</h4><p>Reprogramaciones, ajustes finos y visitas de seguimiento incluidas durante todo el alquiler.</p></div>
+      <div class="garantia-card"><div class="g-icon"><span class="ico"><svg><use href="#i-hands"/></svg></span></div><h4>Acompañamiento experto</h4><p>Un equipo profesional te guía desde la primera cita hasta que el audífono forme parte natural de tu vida.</p></div>
+      <div class="garantia-card"><div class="g-icon"><span class="ico"><svg><use href="#i-card"/></svg></span></div><h4>Sin permanencia inicial</h4><p>Modalidad de alquiler sin ataduras: primero vives la experiencia, luego decides con calma.</p></div>
+      <div class="garantia-card"><div class="g-icon"><span class="ico"><svg><use href="#i-doc"/></svg></span></div><h4>Transparencia total</h4><p>Te explicamos siempre todas las condiciones con total claridad. Sin sorpresas.</p></div>
     </div>
   </div>
 </section>
@@ -509,15 +630,15 @@
 <!-- PROCESO -->
 <section class="proceso-section">
   <div class="proceso-inner">
-    <span class="section-tag">📋 Cómo funciona</span>
+    <span class="section-tag"><span class="ico"><svg><use href="#i-doc"/></svg></span> Cómo funciona</span>
     <h2 class="section-title">Un proceso profesional,<br/><em>progresivo y acompañado</em></h2>
     <p class="section-subtitle">De la primera cita al audífono definitivo, siempre con el respaldo de nuestro equipo.</p>
     <div class="steps-grid">
-      <div class="step-card"><div class="step-num">1</div><div class="step-icon">📅</div><div class="step-title">Cita informativa<br/>· 30 min</div><div class="step-desc">Te explicamos el alquiler y resolvemos tus dudas</div></div>
-      <div class="step-card"><div class="step-num">2</div><div class="step-icon">🩺</div><div class="step-title">Pruebas<br/>audiológicas</div><div class="step-desc">Audiometría completa y programación inicial</div></div>
-      <div class="step-card"><div class="step-num">3</div><div class="step-icon">🎧</div><div class="step-title">Recogida del<br/>audífono</div><div class="step-desc">Te lo llevas ajustado y lo pruebas en tu vida real</div></div>
-      <div class="step-card"><div class="step-num">4</div><div class="step-icon">⚙️</div><div class="step-title">Seguimiento<br/>· 4 semanas</div><div class="step-desc">Ajustes según tus necesidades reales</div></div>
-      <div class="step-card"><div class="step-num">5</div><div class="step-icon">🏆</div><div class="step-title">Entrega<br/>definitiva</div><div class="step-desc">Ajustado a ti. Empieza el alquiler mensual</div></div>
+      <div class="step-card"><div class="step-num">1</div><div class="step-icon"><span class="ico"><svg><use href="#i-calendar"/></svg></span></div><div class="step-title">Cita informativa<br/>· 30 min</div><div class="step-desc">Te explicamos el alquiler y resolvemos tus dudas</div></div>
+      <div class="step-card"><div class="step-num">2</div><div class="step-icon"><span class="ico"><svg><use href="#i-stetho"/></svg></span></div><div class="step-title">Pruebas<br/>audiológicas</div><div class="step-desc">Audiometría completa y programación inicial</div></div>
+      <div class="step-card"><div class="step-num">3</div><div class="step-icon"><span class="ico"><svg><use href="#i-ear"/></svg></span></div><div class="step-title">Recogida del<br/>audífono</div><div class="step-desc">Te lo llevas ajustado y lo pruebas en tu vida real</div></div>
+      <div class="step-card"><div class="step-num">4</div><div class="step-icon"><span class="ico"><svg><use href="#i-gear"/></svg></span></div><div class="step-title">Seguimiento<br/>· 4 semanas</div><div class="step-desc">Ajustes según tus necesidades reales</div></div>
+      <div class="step-card"><div class="step-num">5</div><div class="step-icon"><span class="ico"><svg><use href="#i-trophy"/></svg></span></div><div class="step-title">Entrega<br/>definitiva</div><div class="step-desc">Ajustado a ti. Empieza el alquiler mensual</div></div>
     </div>
   </div>
 </section>
@@ -525,11 +646,11 @@
 <!-- TESTIMONIOS -->
 <section class="testimonials">
   <div class="testimonials-inner">
-    <span class="section-tag">💬 Experiencias reales</span>
+    <span class="section-tag"><span class="ico"><svg><use href="#i-chat"/></svg></span> Experiencias reales</span>
     <h2 class="section-title">Lo que dicen<br/><em>nuestros clientes</em></h2>
     <div class="test-grid">
       <div class="test-card">
-        <div class="test-stars">★★★★★</div>
+        <div class="test-stars"><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span></div>
         <p class="test-text">"Llevaba años diciéndome que ya lo haría. Lo que me convenció fue el alquiler: si no me adaptaba, no perdía nada. A las dos semanas no me lo quería quitar."</p>
         <div class="test-author">
           <img src="img/hearing_improvements_09888fa5-1446-438a-9684-eaf5ff65c845.webp" alt="Manuel R." class="real-img test-avatar" />
@@ -537,7 +658,7 @@
         </div>
       </div>
       <div class="test-card">
-        <div class="test-stars">★★★★★</div>
+        <div class="test-stars"><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span></div>
         <p class="test-text">"Lo pedí para mi madre. El equipo explicó todo con mucha paciencia. La garantía de 3 años nos dio la tranquilidad que necesitábamos para dar el paso."</p>
         <div class="test-author">
           <img src="img/magnific_genera-una-imagen-de-una-_2931375701.webp" alt="Ana C." class="real-img test-avatar" />
@@ -545,7 +666,7 @@
         </div>
       </div>
       <div class="test-card">
-        <div class="test-stars">★★★★★</div>
+        <div class="test-stars"><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span><span class="ico"><svg><use href="#i-star"/></svg></span></div>
         <p class="test-text">"Pensaba que los audífonos eran para ancianos. Este es tan pequeño que nadie lo nota. Lo llevo en el trabajo, en el gimnasio, en todas partes."</p>
         <div class="test-author">
           <img src="img/magnific_generate-4-different-angl_2931400051.webp" alt="Javier M." class="real-img test-avatar" />
@@ -562,7 +683,7 @@
   <p>Reserva una cita informativa gratuita. Sin compromiso. Sin coste. Con todo el acompañamiento de nuestro equipo experto.</p>
   <div class="cta-buttons">
     <a href="#form-cita" class="btn-cta-primary">Reservar cita gratuita →</a>
-    <a href="https://wa.me/34604463001" class="btn-cta-secondary">💬 Hablar por WhatsApp</a>
+    <a href="https://wa.me/34604463001" class="btn-cta-secondary"><span class="ico"><svg><use href="#i-whatsapp"/></svg></span> Hablar por WhatsApp</a>
   </div>
   <p class="cta-contact">O llámanos directamente: <a href="tel:+34969233243">96 923 32 43</a></p>
 </section>
@@ -570,7 +691,7 @@
 <!-- FAQ -->
 <section class="faq-section">
   <div class="faq-inner">
-    <span class="section-tag">❓ Preguntas frecuentes</span>
+    <span class="section-tag">Preguntas frecuentes</span>
     <h2 class="section-title" style="margin-bottom:32px;">Todo lo que necesitas<br/><em>saber antes de decidir</em></h2>
 
     <div class="faq-item">
@@ -597,16 +718,16 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="logo-area">
-        <div class="logo-circle">👁️</div>
+        <div class="logo-circle"><span class="ico"><svg><use href="#i-ear"/></svg></span></div>
         <div class="logo-text">Federópticos <span>Yolanda</span></div>
       </div>
       <p>Especialistas en óptica y audiología. Acompañamos a personas que quieren ver y oír mejor, con la tecnología y el trato que merecen.</p>
     </div>
     <div class="footer-col">
       <h5>Contacto</h5>
-      <a href="tel:+34969233243">📞 96 923 32 43</a>
-      <a href="https://wa.me/34604463001">📲 WhatsApp: 604 46 30 01</a>
-      <a href="#">🌐 yolandaopticos.com</a>
+      <a href="tel:+34969233243"><span class="ico"><svg><use href="#i-phone"/></svg></span> 96 923 32 43</a>
+      <a href="https://wa.me/34604463001"><span class="ico"><svg><use href="#i-whatsapp"/></svg></span> WhatsApp: 604 46 30 01</a>
+      <a href="#"><span class="ico"><svg><use href="#i-globe"/></svg></span> yolandaopticos.com</a>
     </div>
     <div class="footer-col">
       <h5>Legal</h5>
