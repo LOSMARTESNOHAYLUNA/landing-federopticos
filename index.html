@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google Consent Mode (por defecto: denegado hasta que el usuario decida) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- End Google Consent Mode -->
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-P6TSQXVW');</script>
   <!-- End Google Tag Manager -->
@@ -778,5 +791,115 @@
   });
 </script>
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+<!-- ════════ COOKIE BANNER ════════ -->
+<style>
+  #cookie-banner * { box-sizing: border-box; }
+  #cookie-banner {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+    background: #fff; box-shadow: 0 -6px 30px rgba(0,0,0,0.15);
+    padding: 24px 32px; font-family: 'Nunito', system-ui, sans-serif;
+    display: none; border-top: 3px solid var(--verde);
+  }
+  #cookie-banner.show { display: block; animation: ckUp .4s ease; }
+  @keyframes ckUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+  #cookie-banner .ck-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  #cookie-banner .ck-text { flex: 1; min-width: 280px; }
+  #cookie-banner .ck-text h3 { margin: 0 0 6px; font-size: 17px; font-weight: 900; color: var(--negro); }
+  #cookie-banner .ck-text p { margin: 0; font-size: 13px; line-height: 1.6; color: var(--gris-texto); font-weight: 600; }
+  #cookie-banner .ck-text a { color: var(--verde-oscuro); font-weight: 800; }
+  #cookie-banner .ck-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  #cookie-banner .ck-btn { border: none; border-radius: 10px; padding: 13px 24px; font-size: 14px; font-weight: 800; cursor: pointer; font-family: inherit; transition: background .2s, transform .15s; white-space: nowrap; }
+  #cookie-banner .ck-accept { background: var(--verde); color: #fff; box-shadow: 0 4px 14px rgba(45,179,74,.35); }
+  #cookie-banner .ck-accept:hover { background: var(--verde-oscuro); transform: translateY(-1px); }
+  #cookie-banner .ck-reject { background: var(--gris-claro); color: var(--negro); border: 1.5px solid var(--gris-medio); }
+  #cookie-banner .ck-reject:hover { background: #ececec; }
+  #cookie-banner .ck-config { background: none; color: var(--gris-texto); text-decoration: underline; padding: 13px 8px; }
+  #cookie-banner .ck-config:hover { color: var(--negro); }
+  #ck-prefs { display: none; max-width: 1100px; margin: 18px auto 0; border-top: 1px solid var(--gris-medio); padding-top: 18px; }
+  #ck-prefs.show { display: block; }
+  #ck-prefs .ck-pref-row { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--gris-claro); }
+  #ck-prefs .ck-pref-info { flex: 1; }
+  #ck-prefs .ck-pref-info strong { font-size: 14px; color: var(--negro); display: block; margin-bottom: 3px; }
+  #ck-prefs .ck-pref-info span { font-size: 12px; color: var(--gris-texto); font-weight: 600; line-height: 1.5; }
+  #ck-prefs .ck-switch { position: relative; width: 46px; height: 26px; flex-shrink: 0; margin-top: 4px; }
+  #ck-prefs .ck-switch input { opacity: 0; width: 0; height: 0; }
+  #ck-prefs .ck-slider { position: absolute; inset: 0; background: #ccc; border-radius: 26px; transition: .3s; cursor: pointer; }
+  #ck-prefs .ck-slider::before { content: ''; position: absolute; height: 20px; width: 20px; left: 3px; bottom: 3px; background: #fff; border-radius: 50%; transition: .3s; }
+  #ck-prefs .ck-switch input:checked + .ck-slider { background: var(--verde); }
+  #ck-prefs .ck-switch input:checked + .ck-slider::before { transform: translateX(20px); }
+  #ck-prefs .ck-switch input:disabled + .ck-slider { background: var(--verde); opacity: .5; cursor: not-allowed; }
+  #ck-prefs .ck-prefs-save { margin-top: 16px; text-align: right; }
+  @media (max-width: 700px) {
+    #cookie-banner { padding: 18px 18px; }
+    #cookie-banner .ck-actions { width: 100%; }
+    #cookie-banner .ck-btn { flex: 1; text-align: center; }
+  }
+</style>
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="ck-inner">
+    <div class="ck-text">
+      <h3>Usamos cookies</h3>
+      <p>Utilizamos cookies propias y de terceros para analizar el tráfico y mostrarte publicidad relevante sobre nuestros servicios. Puedes aceptar todas, rechazarlas o configurarlas. Más información en nuestra <a href="https://yolandaopticos.com/politica-de-cookies/" target="_blank" rel="noopener">Política de cookies</a>.</p>
+    </div>
+    <div class="ck-actions">
+      <button class="ck-btn ck-config" onclick="ckTogglePrefs()">Configurar</button>
+      <button class="ck-btn ck-reject" onclick="ckReject()">Rechazar</button>
+      <button class="ck-btn ck-accept" onclick="ckAcceptAll()">Aceptar todas</button>
+    </div>
+  </div>
+  <div id="ck-prefs">
+    <div class="ck-pref-row">
+      <div class="ck-pref-info"><strong>Cookies necesarias</strong><span>Imprescindibles para el funcionamiento de la página. No se pueden desactivar.</span></div>
+      <label class="ck-switch"><input type="checkbox" checked disabled><span class="ck-slider"></span></label>
+    </div>
+    <div class="ck-pref-row">
+      <div class="ck-pref-info"><strong>Cookies de analítica</strong><span>Nos permiten medir las visitas y entender cómo se usa la página para mejorarla.</span></div>
+      <label class="ck-switch"><input type="checkbox" id="ck-analytics"><span class="ck-slider"></span></label>
+    </div>
+    <div class="ck-pref-row">
+      <div class="ck-pref-info"><strong>Cookies de publicidad</strong><span>Se usan para mostrarte anuncios relevantes (Meta, Google) y medir las campañas.</span></div>
+      <label class="ck-switch"><input type="checkbox" id="ck-ads"><span class="ck-slider"></span></label>
+    </div>
+    <div class="ck-prefs-save">
+      <button class="ck-btn ck-accept" onclick="ckSavePrefs()">Guardar preferencias</button>
+    </div>
+  </div>
+</div>
+<script>
+  function ckUpdateConsent(analytics, ads) {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': analytics ? 'granted' : 'denied',
+        'ad_storage': ads ? 'granted' : 'denied',
+        'ad_user_data': ads ? 'granted' : 'denied',
+        'ad_personalization': ads ? 'granted' : 'denied'
+      });
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'cookie_consent_update', analytics_consent: analytics, ads_consent: ads });
+  }
+  function ckStore(a, d) { localStorage.setItem('ck_consent', JSON.stringify({ analytics: a, ads: d, ts: Date.now() })); }
+  function ckHide() { document.getElementById('cookie-banner').classList.remove('show'); }
+  function ckAcceptAll() { ckUpdateConsent(true, true); ckStore(true, true); ckHide(); }
+  function ckReject() { ckUpdateConsent(false, false); ckStore(false, false); ckHide(); }
+  function ckTogglePrefs() { document.getElementById('ck-prefs').classList.toggle('show'); }
+  function ckSavePrefs() {
+    var a = document.getElementById('ck-analytics').checked;
+    var d = document.getElementById('ck-ads').checked;
+    ckUpdateConsent(a, d); ckStore(a, d); ckHide();
+  }
+  (function () {
+    var saved = localStorage.getItem('ck_consent');
+    if (saved) {
+      try { var c = JSON.parse(saved); ckUpdateConsent(c.analytics, c.ads); }
+      catch (e) { document.getElementById('cookie-banner').classList.add('show'); }
+    } else {
+      document.getElementById('cookie-banner').classList.add('show');
+    }
+  })();
+</script>
+<!-- ════════ fin COOKIE BANNER ════════ -->
+
 </body>
 </html>
