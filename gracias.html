@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-P6TSQXVW');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Gracias! · Federópticos Yolanda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --verde: #2DB34A;
+      --verde-oscuro: #1E8F38;
+      --verde-claro: #E8F8EC;
+      --verde-suave: #C8EDCF;
+      --gris-claro: #F7F9F8;
+      --gris-medio: #E4EAE6;
+      --gris-texto: #5A6B61;
+      --negro: #1A2620;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; color: var(--negro); background: linear-gradient(135deg, #EDFAF1 0%, #D8F5E1 100%); min-height: 100vh; display: flex; flex-direction: column; }
+    .ico { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+    .ico svg { display: block; width: 100%; height: 100%; }
+
+    /* NAV */
+    nav { background: white; border-bottom: 2px solid var(--verde-suave); display: flex; align-items: center; justify-content: space-between; padding: 14px 40px; box-shadow: 0 2px 12px rgba(45,179,74,0.08); }
+    .logo-area { display: flex; align-items: center; gap: 12px; }
+    .logo-circle { width: 44px; height: 44px; background: var(--verde); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .logo-circle .ico { width: 24px; height: 24px; color: white; }
+    .logo-text { font-size: 17px; font-weight: 900; color: var(--negro); }
+    .logo-text span { color: var(--verde); }
+    .nav-phone a { font-weight: 800; color: var(--verde-oscuro); text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
+    .nav-phone a .ico { width: 17px; height: 17px; }
+
+    /* MAIN */
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 24px; }
+    .card { background: white; border-radius: 24px; box-shadow: 0 20px 60px rgba(29,61,46,0.15); padding: 56px 48px; max-width: 620px; width: 100%; text-align: center; }
+
+    .check-badge { width: 88px; height: 88px; background: var(--verde-claro); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; position: relative; animation: pop 0.5s ease; }
+    .check-badge::after { content: ''; position: absolute; inset: -8px; border-radius: 50%; border: 2px solid var(--verde-suave); opacity: 0; animation: ring 1s ease 0.3s; }
+    .check-badge .ico { width: 46px; height: 46px; color: var(--verde); }
+    @keyframes pop { 0% { transform: scale(0); } 60% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    @keyframes ring { 0% { transform: scale(0.9); opacity: 0.8; } 100% { transform: scale(1.15); opacity: 0; } }
+
+    .tag { display: inline-block; background: var(--verde-claro); color: var(--verde-oscuro); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 18px; }
+    h1 { font-family: 'Merriweather', serif; font-size: 36px; font-weight: 700; color: var(--negro); line-height: 1.25; margin-bottom: 16px; }
+    h1 em { font-style: normal; color: var(--verde); }
+    .lead { font-size: 17px; color: var(--gris-texto); font-weight: 600; line-height: 1.6; margin-bottom: 36px; }
+
+    /* NEXT STEPS */
+    .steps { text-align: left; background: var(--gris-claro); border: 1px solid var(--gris-medio); border-radius: 16px; padding: 28px; margin-bottom: 36px; }
+    .steps h2 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--negro); margin-bottom: 20px; }
+    .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+    .step:last-child { margin-bottom: 0; }
+    .step-num { width: 30px; height: 30px; background: var(--verde); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+    .step-txt { font-size: 14px; font-weight: 600; color: var(--gris-texto); line-height: 1.5; padding-top: 3px; }
+    .step-txt strong { color: var(--negro); font-weight: 800; }
+
+    /* CONTACT BOX */
+    .contact-box { background: var(--verde-claro); border-radius: 16px; padding: 24px; margin-bottom: 32px; }
+    .contact-box p { font-size: 14px; font-weight: 700; color: var(--negro); margin-bottom: 14px; }
+    .contact-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 12px; font-weight: 800; font-size: 15px; text-decoration: none; font-family: 'Nunito', sans-serif; transition: transform 0.15s, box-shadow 0.2s, background 0.2s; }
+    .btn .ico { width: 18px; height: 18px; }
+    .btn-call { background: var(--verde); color: #fff; box-shadow: 0 4px 14px rgba(45,179,74,0.35); }
+    .btn-call:hover { background: var(--verde-oscuro); transform: translateY(-2px); }
+    .btn-wa { background: #fff; color: var(--verde-oscuro); border: 2px solid var(--verde-suave); }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(45,179,74,0.2); }
+
+    .home-link { font-size: 14px; color: var(--gris-texto); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .home-link:hover { color: var(--verde-oscuro); }
+    .home-link .ico { width: 15px; height: 15px; }
+
+    /* FOOTER */
+    footer { background: var(--negro); color: rgba(255,255,255,0.5); padding: 24px 40px; text-align: center; font-size: 12px; font-weight: 600; }
+
+    @media (max-width: 600px) {
+      nav { padding: 12px 20px; }
+      .nav-phone { display: none; }
+      .card { padding: 40px 24px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6TSQXVW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 2.5-1.5 3.5-2.5 4.5s-1.5 2-1.5 3.5a3 3 0 0 1-6 0"/><path d="M9 8.5a3 3 0 0 1 6 0c0 1.5-1 2-1 3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.6 6.6 0 0 1-1.9-1.2 7.3 7.3 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c.6.3 1.1.4 1.5.5a3.5 3.5 0 0 0 1.6.1c.5-.1 1.4-.6 1.6-1.1s.2-1 .1-1.1-.2-.2-.4-.3z"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-area">
+    <div class="logo-circle"><span class="ico"><svg><use href="#i-ear"/></svg></span></div>
+    <div class="logo-text">Federópticos <span>Yolanda</span></div>
+  </div>
+  <div class="nav-phone">
+    <a href="tel:+34969233243"><span class="ico"><svg><use href="#i-phone"/></svg></span> 96 923 32 43</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main>
+  <div class="card">
+    <div class="check-badge"><span class="ico"><svg><use href="#i-check"/></svg></span></div>
+    <span class="tag">Solicitud recibida</span>
+    <h1>¡Gracias! Hemos recibido<br/>tu <em>solicitud de cita</em></h1>
+    <p class="lead">Un miembro de nuestro equipo de audiología se pondrá en contacto contigo <strong>en menos de 24 horas</strong> (en horario comercial) para confirmar el día y la hora que mejor te venga.</p>
+
+    <div class="steps">
+      <h2>Qué ocurre ahora</h2>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-txt"><strong>Te llamamos para confirmar.</strong> Acordamos contigo la fecha y hora de tu cita informativa gratuita.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-txt"><strong>Cita informativa de 30 minutos.</strong> Te explicamos la Experiencia Auditiva Pro y resolvemos todas tus dudas. Sin compromiso.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-txt"><strong>Decides con calma.</strong> Si quieres seguir adelante, programamos las pruebas audiológicas. A tu ritmo.</div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <p>¿Prefieres no esperar? Contáctanos directamente:</p>
+      <div class="contact-actions">
+        <a href="tel:+34969233243" class="btn btn-call"><span class="ico"><svg><use href="#i-phone"/></svg></span> 96 923 32 43</a>
+        <a href="https://wa.me/34604463001" class="btn btn-wa"><span class="ico"><svg><use href="#i-whatsapp"/></svg></span> WhatsApp</a>
+      </div>
+    </div>
+
+    <a href="https://infinio.federopticosyolanda.com/" class="home-link"><span class="ico"><svg><use href="#i-arrow-left"/></svg></span> Volver a la página principal</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Federópticos Yolanda · Experiencia Auditiva Pro · Audiología especializada
+</footer>
+
+</body>
+</html>
